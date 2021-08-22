@@ -1,12 +1,19 @@
 import Profile from './components/Profile'
-import Statistics from './components/Statistics';
+import StatisticsList from './components/StatisticsList';
+import FriendList from './components/FriendList'
+import TransactionHistory from './components/TransactionHistory'
+
+
 import user from './user.json';
 import statisticalData from './statistical-data.json';
+import friends from './friends.json'
+import transactions from './transactions.json'
+
 
 export default function App() {
     return( 
-      <div>
-        <section>
+    <div>
+      <section>
         <Profile
           avatar={user.avatar}
           name={user.name}
@@ -17,16 +24,18 @@ export default function App() {
           likes={user.stats.likes}
         />
       </section>
-        <section>
-          {statisticalData.map(statistic => (
-            <Statistics
-          key={statisticalData.id}    
-          label={statisticalData.label}
-          percentage={statisticalData.percentage}
-            />
-          ) )}
         
-      </section>
-      </div> 
+      <section>
+          <StatisticsList items={ statisticalData }/>
+        </section>
+        
+        <section>
+          <FriendList friends={ friends }/>
+        </section>
+
+        <section>
+          <TransactionHistory items={ transactions }/>
+        </section>
+    </div> 
   )
-}
+};
