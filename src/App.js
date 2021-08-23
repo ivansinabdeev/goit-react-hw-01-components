@@ -1,5 +1,5 @@
 import Profile from './components/Profile/Profile'
-import StatisticsList from './components/StatisticsList';
+import StatisticsList from './components/Statistics/StatisticsList';
 import FriendList from './components/Friends/FriendList'
 import TransactionHistory from './components/TransactionHistory'
 
@@ -13,19 +13,19 @@ import transactions from './transactions.json'
 export default function App() {
     return( 
     <div>
-      <section>
-        <Profile
-          avatar={user.avatar}
-          name={user.name}
-          tag={user.tag}
-          location={user.location}
-          followers={user.stats.followers}
-          views={user.stats.views}
-          likes={user.stats.likes}
-        />
-      </section>
+        <section>
+          <Profile
+            avatar={user.avatar}
+            name={user.name}
+            tag={user.tag}
+            location={user.location}
+            followers={user.stats.followers}
+            views={user.stats.views}
+            likes={user.stats.likes}
+          />
+        </section>
         
-      <section>
+        <section>
           <StatisticsList items={ statisticalData }/>
         </section>
         
