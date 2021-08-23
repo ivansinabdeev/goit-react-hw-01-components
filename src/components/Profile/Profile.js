@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import notAvatar from './not_avatar.jpg';
+// import notAvatar from './components/not_avatar.jpg';
 
 export default function Profile({
-    avatar = notAvatar,
+    avatar,
     name,
     tag,
     location,

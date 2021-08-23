@@ -1,6 +1,6 @@
-import Profile from './components/Profile'
+import Profile from './components/Profile/Profile'
 import StatisticsList from './components/StatisticsList';
-import FriendList from './components/FriendList'
+import FriendList from './components/Friends/FriendList'
 import TransactionHistory from './components/TransactionHistory'
 
 
