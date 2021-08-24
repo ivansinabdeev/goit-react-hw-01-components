@@ -1,12 +1,13 @@
 
-import Statistics from './Statistics';
 
-export default function StatisticsList({ items }) {
+import StatisticsItem from './StatisticsItem';
+
+ function StatisticsList({ items }) {
     return (
     <ul>
         {items.map(item =>
             <li key={item.id}>
-                <Statistics
+                <StatisticsItem
                     label={item.label}
                     percentage={item.percentage}
                 />
@@ -15,3 +16,4 @@ export default function StatisticsList({ items }) {
     );
 };
  
+export default StatisticsList;

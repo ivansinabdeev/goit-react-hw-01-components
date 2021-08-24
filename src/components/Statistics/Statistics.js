@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css'
+// import s from './StatisticsItem.module.css'
+import StatisticsItem from './StatisticsItem'
 
 export default function Statistics({
   label,
@@ -8,8 +10,9 @@ export default function Statistics({
       <section className={s.statistics}>
         <ul className={s.statList}>
           <li className={s.item}>
-            <span className={s.label}>{label}</span>
-            <span className={s.percentage}>{percentage}</span>
+            <StatisticsItem
+              label={label}
+              percentage={percentage} />
           </li>
         </ul>
       </section>
