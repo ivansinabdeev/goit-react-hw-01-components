@@ -1,18 +1,19 @@
-
-
-import StatisticsItem from './StatisticsItem';
+import Statistics from './Statistics';
+import s from './Statistics.module.css'
 
  function StatisticsList({ items }) {
-    return (
-    <ul>
-        {items.map(item =>
-            <li key={item.id}>
-                <StatisticsItem
-                    label={item.label}
-                    percentage={item.percentage}
-                />
-            </li>)}
-    </ul>
+     return (
+        <div className={s.statistics}>
+            <ul className={s.list}>
+                {items.map(item =>
+                    <li className={s.item} key={item.id}>
+                        <Statistics
+                            label={item.label}
+                            percentage={item.percentage}
+                        />
+                    </li>)}
+            </ul>
+        </div>
     );
 };
  

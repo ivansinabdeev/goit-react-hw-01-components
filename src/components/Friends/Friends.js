@@ -1,20 +1,17 @@
 import PropTypes from 'prop-types';
+import s from './Friends.module.css'
+
 
 export default function Friends({
     avatar,
     name,
     isOnline }) {
     return (
-        <section>
-            <ul className="friend-list">
-                <li className="item">
-                    <span className="status">{isOnline === true ? <span className="status-green"></span> : <span className="status-red"></span>}</span>
-                    <img className="avatar" src={avatar} alt="аватар друга" width="48" />
-                    <p className="name">{name}</p>
-                </li>
-            </ul>
-
-        </section>
+        <>
+            <span className={s.status}>{isOnline === true ? <span className={s.statusGreen}></span> : <span className={s.statusRed}></span>}</span>
+            <img className={s.avatar} src={avatar} alt="аватар друга" width="64" />
+            <p className={s.name}>{name}</p>
+        </>
     );
 };
 
@@ -23,5 +20,3 @@ Friends.propTypes = {
     name: PropTypes.string,
     isOnline: PropTypes.bool
 }
-
-// <span className="status-green"></span> : <span className="status-red"></span>

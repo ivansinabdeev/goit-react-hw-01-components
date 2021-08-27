@@ -19,17 +19,3 @@ ul {
   margin-left: 0;
   padding-left: 0;
 }
-.status-green {
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: green;
-}
-.status-red {
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: red;
-}
