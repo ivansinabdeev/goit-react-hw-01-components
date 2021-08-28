@@ -1,7 +1,7 @@
 import Friends from './Friends';
 import s from './Friends.module.css'
 
-export default function FriendList({ friends }) {
+export default function FriendListItem({ friends }) {
     return (
         <div className={s.section}>
             <ul className={s.friendList}>

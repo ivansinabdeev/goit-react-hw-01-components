@@ -8,7 +8,9 @@ export default function Friends({
     isOnline }) {
     return (
         <>
-            <span className={s.status}>{isOnline === true ? <span className={s.statusGreen}></span> : <span className={s.statusRed}></span>}</span>
+            <div className={s.status}>
+            <span className={isOnline === true ? s.statusGreen : s.statusRed} />
+            </div>
             <img className={s.avatar} src={avatar} alt="аватар друга" width="64" />
             <p className={s.name}>{name}</p>
         </>

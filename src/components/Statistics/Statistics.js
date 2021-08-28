@@ -1,19 +1,20 @@
-import PropTypes from 'prop-types';
+import Statistic from './Statistic'
 import s from './Statistics.module.css'
 
-
-export default function Statistics({
-  label,
-  percentage }) {
-    return (
-      <>
-        <span className={s.label}>{label}</span>
-        <span className={s.percentage}>{percentage}%</span>
-      </>
+ function Statistics({ stats, title }) {
+     return (
+        <div className={s.statistics}>
+            <ul className={s.list}>
+                {stats.map(stat =>
+                    <li className={s.item} key={stat.id}>
+                        <Statistic
+                            label={stat.label}
+                            percentage={stat.percentage}
+                        />
+                    </li>)}
+            </ul>
+        </div>
     );
 };
-
-Statistics.propTypes = {
-    label: PropTypes.string,
-    percentage: PropTypes.number
-}
+ 
+export default Statistics;

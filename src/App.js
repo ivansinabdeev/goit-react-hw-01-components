@@ -1,6 +1,6 @@
 import Profile from './components/Profile/Profile'
-import StatisticsList from './components/Statistics/StatisticsList';
-import FriendList from './components/Friends/FriendList'
+import Statistics from './components/Statistics/Statistics';
+import FriendListItem from './components/Friends/FriendListItem'
 import TransactionHistory from './components/Transactions/TransactionHistory'
 
 
@@ -19,6 +19,7 @@ export default function App() {
             name={user.name}
             tag={user.tag}
             location={user.location}
+            // stats={user.stats}
             followers={user.stats.followers}
             views={user.stats.views}
             likes={user.stats.likes}
@@ -26,11 +27,11 @@ export default function App() {
         </section>
         
         <section>
-          <StatisticsList items={ statisticalData }/>
+          <Statistics stats={ statisticalData }/>
         </section>
         
         <section>
-          <FriendList friends={ friends }/>
+          <FriendListItem friends={ friends }/>
         </section>
 
         <section>
