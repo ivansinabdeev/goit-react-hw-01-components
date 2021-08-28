@@ -6,10 +6,12 @@ export default function Profile({
     avatar = notAvatar,
     name,
     tag,
-    location,
+  location,
+  stats: {
     followers,
     views,
-    likes }) {
+    likes}
+     }) {
   return (
     <div className={s.profile}>
       <div className={s.description}>

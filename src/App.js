@@ -19,15 +19,12 @@ export default function App() {
             name={user.name}
             tag={user.tag}
             location={user.location}
-            // stats={user.stats}
-            followers={user.stats.followers}
-            views={user.stats.views}
-            likes={user.stats.likes}
+            stats={user.stats}
           />
         </section>
         
         <section>
-          <Statistics stats={ statisticalData }/>
+          <Statistics title="Upload stats" stats={ statisticalData }/>
         </section>
         
         <section>
