@@ -1,6 +1,6 @@
 import Profile from './components/Profile/Profile'
 import Statistics from './components/Statistics/Statistics';
-import FriendListItem from './components/Friends/FriendListItem'
+import Friends from './components/Friends/Friends'
 import TransactionHistory from './components/Transactions/TransactionHistory'
 
 
@@ -24,11 +24,12 @@ export default function App() {
         </section>
         
         <section>
-          <Statistics title="Upload stats" stats={ statisticalData }/>
+          <Statistics title="" stats={statisticalData} />;
+          {/* <Statistics stats={statisticalData} />; */}
         </section>
         
         <section>
-          <FriendListItem friends={ friends }/>
+          <Friends friends={ friends }/>
         </section>
 
         <section>
