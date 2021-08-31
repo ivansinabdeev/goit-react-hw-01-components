@@ -24,8 +24,7 @@ export default function App() {
         </section>
         
         <section>
-          <Statistics title="" stats={statisticalData} />;
-          {/* <Statistics stats={statisticalData} />; */}
+          <Statistics title="" stats={statisticalData} />
         </section>
         
         <section>
